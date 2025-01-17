@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="module" src="index.js"></script>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="WAD-first-project" />
+  <meta name="keywords" content="HTML, CSS" />
+  <meta name="author" content="Nikita Ostrovskii & Can Wrobel" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>"Beleg HTML & CSS"</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="icon" type="images/x-icon" href="img/fav.ico">
+</head>
+
+<body>
+
+
+
+    <div id="mainscreen">
+        <div id="login-wrapper">        
+            <div class="login-box">
+                <h2>Non-Sustainable locations in Berlin and Brandenburg</h2>
+                <h2>Sign in</h2>
+    
+                <form id="loginForm">
+                    <div class="user-box">
+                        <input type="text" name="username" id="username" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="password" required="">
+                        <label>Password</label>
+                    </div>
+                    <a href="#" id="loginLink">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+<div id="mapscontainermk2">
+    <div class="welcome-container">
+        <h2 class="welcome" id="welcome">>>>Welcome, user! Look at existing locations or add/ update some.</h2>
+        <button class="btn" id="addSome">add</button>
+        <button class="btn" id="logout">Logout</button>
+    </div>
+    <br>
+    <div id="containermk2">
+        <div id="standorteListe">
+        <!-- Liste der Standorte wird hier eingefügt -->
+        </div>
+        <div id="map"></div>
+
+    </div>
+</div>
+<br>
+<!-- <div id="map-container" class="map-container">
+    <div class="welcome-container">
+        <h2 class="welcome">>>>Welcome, user! Look at existing locations or add/ update some.</h2>
+        <button class="btn" id="addSome">add</button>
+        <button class="btn">Logout</button>
+    </div>
+    
+    <iframe 
+    src="https://www.google.com/maps/d/embed?mid=14BbEVfbYfBN48c-pqsTPHkz4mJHjinc&ehbc=2E312F" 
+    frameborder="0"
+    style="border:0;"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0">
+    </iframe>
+    
+    <div class="impressum-container">
+        <h3 class="impressum">Impressum</h3>  
+        <p>Students: Can Wrobel und Nikita Ostrovskii</p>
+        <p>Module: Web Application Development</p>
+        <p>Professor: Prof. Dr. Elena Schüler</p>
+
+    </div>
+
+    <div class="htw-container impressum-container">
+        <h3>HTW-Berlin FS IV</h3>
+        <p>Wilhelminenhofstraße 75A</p>
+        <p>12459 Berlin</p>
+        <a href="">Datenschutzbestimmungen</a>
+    </div>
+
+</div> -->
+
+
+
+<div class="add-container container-wrapper" id="addscreen">
+    <div class="container right-panel-active">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Add a new location</h2>
+                <input type="text" placeholder="Name *" class="input" required id="add-name"/>
+            <input type="text" placeholder="Description" class="input" id="add-description"/>
+            
+                <input type="text" placeholder="Street *" class="input" required="" id="street"/>
+                <input type="text" placeholder="Zip *" class="input" required="" id="zip"/>
+                <input type="text" placeholder="City *" class="input" required="" id="city"/>
+                <div class="dropdown-container">
+                    <label for="location">State:</label>
+                    <select name="location" id="state">
+                        <option value="berlin" selected>Berlin</option>
+                        <option value="brandenburg">Brandenburg</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Lat" class="input" id="add-lat"/>
+                <input type="text" placeholder="Lon" class="input" id="add-lon"/>
+            
+            </form>
+
+        </div>
+    
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay add-overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="saveLocation">Add</button>
+                    <br>
+                    <button class="btn" id="cancel-add">Cancel</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="update-container container-wrapper">
+    <div class="container right-panel-active">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="#" class="form-update" id="form1-update">
+                <h2 class="form__title" id="detail-text">Detail-Screen: Update or Delete</h2>
+                <input id="update-name" type="text" placeholder="Name *" class="input-update" value="Kraftwerk Reuter West" required=""/>
+                <input id="update-description" type="text" placeholder="Description" class="input" />
+                <input id="update-street" type="text" placeholder="Street *" class="input" value="Großer Spreering 5" required=""/>
+                <input id="update-zip" type="text" placeholder="Zip *" class="input" value="13599" required=""/>
+                <input id="update-city" type="text" placeholder="City *" class="input" value="Berlin-Spandau" required=""/>
+                <div class="dropdown-container">
+                    <label for="location">State:</label>
+                    <select name="location" id="location">
+                        <option value="berlin" selected>Berlin</option>
+                        <option value="brandenburg">Brandenburg</option>
+                    </select>
+                </div>
+                <input type="text" id="update-lat" placeholder="Lat" class="input" />
+                <input type="text" id="update-lon" placeholder="Lon" class="input" />
+    
+            </form>
+
+        </div>
+    
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay update-overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="update">Update</button><br>
+                    <button class="btn" id="delete">Delete</button><br>
+                    <button class="btn" id="cancel-update">Cancel</button><br>
+                </div>
+                <div class="overlay__panel overlay--right">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>Impressum Datenschutz Developers: Nikita und Can</p>
+    </div>
+</footer>
+    <!--The div element for the map -->
+
+
+<script src="./script.js"></script>
+
+<script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyDHOlKv8ldnm6kvvJ1a83y9PkFdVA16zHA",
+      v: "weekly",
+      // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+      // Add other bootstrap parameters as needed, using camel case.
+    });
+  </script>
+
+</body>
+</html>
